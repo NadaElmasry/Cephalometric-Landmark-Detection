@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=PT+Serif:wght@400;700&display=swap"
+    rel="stylesheet">
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+    crossorigin="anonymous">
+
+
+  <link href="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-fileinput@5.5.2/css/fileinput.min.css" media="all"
+    rel="stylesheet" type="text/css" />
+  <!-- adddddddddd -->
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+
+  <link href="Css/photoviewer.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="Css/viewImage.css">
+  <link rel="stylesheet" href="Css/home.css">
+
+</head>
+
+<body dir="ltr">
+  <div class="navbar-box">
+    <div class="row">
+      <nav class="navbar navbar-expand-lg text-black">
+        <div class="container mx-auto">
+          <a class="navbar-brand me-4" href="index.html"><i class="fa-solid fa-tooth pe-2"></i>
+            <h3 class="d-inline-block">Cepheo</h3>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="upload.html">Upload X-ray Image</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="Repository.html">Repository</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Help.html">Help</a>
+              </li>
+
+            </ul>
+            <ul class="navbar-nav d-flex ms-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Login</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Sign Up</a>
+              </li>
+            </ul>
+
+          </div>
+
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div class="row-elements">
+    <div class="container mx-auto mt-5 mb-0">
+      <div class="row axc-subnav align-items-center justify-content-md-between">
+        <div class="col-md-8 col-10">
+          <h1 class="m-0 Your-repository">Analysis Result</h1>
+        </div>
+
+        <div class="col-auto d-none d-md-block">
+          <a class="btn send_to_tracking w-100  mb-md-0" id="generate_Pdf_btn">Save patient record</a>
+        </div>
+        <div class="col-auto d-none d-md-block">
+          <a class="btn send_to_tracking w-100  mb-md-0" href="upload.html">Start a new tracing</a>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+  <div class=" mx-auto p-0 mt-5 w-75">
+
+    <div class="alert alert-success pt-4" role="alert">
+      <h4 class="alert-heading pb-3">Informative Note</h4>
+      <hr class="mb-3">
+      <p class="mb-0">Green points: ground-truth of landmarks’ locations
+
+        <br>
+        Red points: predicted landmarks’ locations.
+      </p>
+    </div>
+  </div>
+
+
+
+
+
+  <body>
+
+    <div id="particles-js" class="d-flex">
+      <div class="position-absolute w-100 ">
+        <div class="container mx-auto w-100 my-5">
+
+          <div class="result1 row d-flex justify-content-center flex-wrap align-items-center">
+            <div class="col-md-4 main-section mb-4">
+              <div class="image-set">
+                <a data-gallery="photoviewer" data-title="Analysis Result" data-group="a" href="" class="w-100"
+                  id="plugin-result-img">
+                  <img src="" alt="" class="w-100 result_img">
+                </a>
+              </div>
+
+              <div class="text-center pb-3 pt-3">
+                <a href="Img/result_output.png" download class="text-danger bold">Save analyzed image</a>
+              </div>
+            </div>
+
+            <div class="col-md-1"></div>
+            <div class="col-md-6 p-3 main-section mb-4">
+              <div class="">
+                <h3 class="p-3 text-center">Patient History</h3>
+                <hr>
+
+                <div class="result_container">
+
+                </div>
+
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="footer">
+          <div class=" mx-auto">
+            <div class="row p-5 d-flex justify-content-center">
+              <div class="col-md-6 offset-xl-2 col-xl-4">
+                <div class="d-flex flex-column align-items-start pb-5">
+                  <a href="/en" class="img-footer mb-3">
+                    <i class="fa-solid fa-tooth pe-2 footer-icon-tooth"></i>
+                    <h3 class="d-inline-block">Cepheo</h3>
+                  </a>
+                  <p>
+                    Cepheo is an online program for analyzing cephalometric X-Rays. Powered by advanced artificial
+                    intelligence it automatically performs landmark positioning. It is the program that saves time and
+                    ease the orthodontic treatment.
+                    <br><br>
+                    Follow us:
+                  </p>
+                  <div class="d-flex mt-3">
+                    <a href="https://www.facebook.com/cephio/" class="pe-2">
+
+                      <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCS2JvhdL67fgfj6zcHG8biQ">
+
+                      <i class="fa-brands fa-youtube"></i>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-md-6 d-flex justify-content-start justify-content-md-center">
+                <div class="d-flex justify-content-center me-5">
+                  <div>
+                    <h5 class="footer-col-header pb-4">Support</h5>
+                    <p><a href="/en/privacy/" class="footer-small-description support-link">Privacy Policy</a></p>
+                    <p><a href="/en/terms/" class="footer-small-description support-link">Terms &amp; conditions</a></p>
+                    <p id="changePreferences" class="footer-small-description support-link">Cookie preferences</p>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center ">
+                  <div>
+                    <h5 class="footer-col-header pb-4">Contact</h5>
+                    <address class="footer-small-description" property="email">
+                      <a class="footer-small-description footer-mail"
+                        href="mailto:support@cepheo.com">support@cepheo.com</a>
+                    </address>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div id="divToExport">
+      <h2 class="text-center mb-3">Patient Medical Report</h2>
+      <hr class="mb-3">
+      <img href="" alt="" class="w-50 mb-4" id="patientAnalyzedImg">
+      <div class="result_container">
+
+      </div>
+    </div>
+
+
+
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+      type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="Js/result.js"></script>
+
+
+    <script src="Js/particles.min.js"></script>
+    <script src="Js/photoviewer.js"></script>
+    <script src="Js/main.js"> </script>
+    <script>
+      $('[data-gallery=photoviewer]').click(function (e) {
+
+        e.preventDefault();
+
+        var items = [],
+          options = {
+            index: $(this).index(),
+            modalWidth: 500,
+            modalHeight: 500,
+          };
+
+
+        $('[data-gallery=photoviewer]').each(function () {
+          items.push({
+            src: $(this).attr('href'),
+            title: $(this).attr('data-title')
+          });
+        });
+
+        new PhotoViewer(items, options);
+
+      });
+    </script>
+  </body>
+
+</html>

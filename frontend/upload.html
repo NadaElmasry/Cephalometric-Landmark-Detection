@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=PT+Serif:wght@400;700&display=swap"
+    rel="stylesheet">
+
+
+  <!-- Bootstrap & css file -->
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css'>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+    crossorigin="anonymous">
+
+
+  <link rel="stylesheet" href="Css/home.css">
+</head>
+
+<body>
+
+
+  <div class="navbar-box mb-4">
+    <div class="row">
+      <nav class="navbar navbar-expand-lg text-black">
+        <div class="container mx-auto">
+          <!-- <img src="Img/ceph_con.png" class="icon" /> -->
+          <a class="navbar-brand me-4" href="index.html"><i class="fa-solid fa-tooth pe-2"></i>
+            <h3 class="d-inline-block">Cepheo</h3>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="upload.html">Upload X-ray Image</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="Repository.html">Repository</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Help.html">Help</a>
+              </li>
+
+            </ul>
+            <ul class="navbar-nav d-flex ms-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Login</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Sign Up</a>
+              </li>
+            </ul>
+
+          </div>
+
+
+
+
+        </div>
+      </nav>
+    </div>
+  </div>
+
+
+
+
+
+
+  <div id="particles-js" class=" mb-5 position-relavive d-flex justify-content-center align-items-baseline">
+    <div class="position-absolute">
+      <div class="data position-relavive d-flex justify-content-center">
+        <div class="container mb-5">
+          <div class="row mt-5">
+            <div class="col-lg-6 main-section mb-4">
+              <form action="/examples/actions/confirmation.php" method="post" class="card p-2 part-upload">
+
+                <h3 class="pt-1 mb-2">Upload image</h3>
+                <p class="mb-4">Click to upload a right-facing lateral.</p>
+                <div id="yourBtn" onclick="getFile()" class="text-white p-2 ">
+                  <div class="text-center">
+                    <div style='height: 0px;width: 0px; overflow:hidden;'>
+                      <input id="imageinput" type="file" value="upload" />
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center position-relative">
+                      <div id="alt_img_to_drag"></div>
+                      <img src="Img/orientation.png" class="" id="logo-img">
+                    </div>
+                    <canvas id="canvas" class="w-50 m-auto" style="cursor:crosshair"></canvas>
+                  </div>
+                </div>
+                <p>
+
+                <div class="row mt-5">
+
+                  <div class="col-lg-6 mx-auto">
+                    <a class="btn" id="delete" onclick="removeCanvas()">Remove x-ray image</a>
+                  </div>
+
+                </div>
+
+                </p>
+              </form>
+            </div>
+            <div class="col-lg-1"></div>
+
+            <div class="col-lg-5 main-section mb-4">
+              <div class="card p-lg-3 p-0 h-100">
+                <div class="card-body pb-0">
+                  <div class="row ">
+                    <div class="col-lg-12 ">
+                      <h3 class="mb-3">Add data for analysis <svg id="okDataSendToTracing"
+                          class="svg-inline--fa fa-check-circle fa-w-16 text-success" style="display: none;"
+                          aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check-circle" role="img"
+                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                          <path fill="currentColor"
+                            d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z">
+                          </path>
+                        </svg>
+
+                      </h3>
+                    </div>
+                    <div class="col-lg-12 mb-3">
+                      <label for="patient_identifier" class="mb-2">Patient identifier</label>
+                      <a href="#" class="info-tooltip-light ml-1" data-toggle="tooltip" title=""
+                        data-original-title="Enter any identifier of the patient such as for example name, family name, DOB or if you want to keep demographics hidden just a patient registration number from your patient files."><svg
+                          class="svg-inline--fa fa-question-circle fa-w-16" aria-hidden="true" focusable="false"
+                          data-prefix="fa" data-icon="question-circle" role="img" xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 512 512" data-fa-i2svg="">
+                          <path fill="currentColor"
+                            d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zM262.655 90c-54.497 0-89.255 22.957-116.549 63.758-3.536 5.286-2.353 12.415 2.715 16.258l34.699 26.31c5.205 3.947 12.621 3.008 16.665-2.122 17.864-22.658 30.113-35.797 57.303-35.797 20.429 0 45.698 13.148 45.698 32.958 0 14.976-12.363 22.667-32.534 33.976C247.128 238.528 216 254.941 216 296v4c0 6.627 5.373 12 12 12h56c6.627 0 12-5.373 12-12v-1.333c0-28.462 83.186-29.647 83.186-106.667 0-58.002-60.165-102-116.531-102zM256 338c-25.365 0-46 20.635-46 46 0 25.364 20.635 46 46 46s46-20.636 46-46c0-25.365-20.635-46-46-46z">
+                          </path>
+                        </svg></a>
+                      <input type="text" class="form-control" id="patient_identifier" name="patient_ident[]"
+                        placeholder="" value="" required="">
+                      <div class="invalid-feedback">Required!</div>
+                    </div>
+
+                    <div class="col-lg-12">
+                      <label for="input_age" class="mb-2">Patient age</label>
+                      <input type="text" class="form-control" id="input_age" name="age[]" placeholder="" value=""
+                        required="">
+                      <div class="invalid-feedback">Required!</div>
+                    </div>
+
+                    <div class="row my-4">
+
+                      <div class="col-lg-8 col_analysis_type">
+                        <label for="select_trace_type mb-5">Analysis type</label>
+                        <a href="#" class="info-tooltip-light ml-1" data-toggle="tooltip" title=""
+                          data-original-title="Select the analysis type or measurement protocol for your X-ray image, for example Rickets, Downs, ..."><svg
+                            class="svg-inline--fa fa-question-circle fa-w-16" aria-hidden="true" focusable="false"
+                            data-prefix="fa" data-icon="question-circle" role="img" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512" data-fa-i2svg="">
+                            <path fill="currentColor"
+                              d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zM262.655 90c-54.497 0-89.255 22.957-116.549 63.758-3.536 5.286-2.353 12.415 2.715 16.258l34.699 26.31c5.205 3.947 12.621 3.008 16.665-2.122 17.864-22.658 30.113-35.797 57.303-35.797 20.429 0 45.698 13.148 45.698 32.958 0 14.976-12.363 22.667-32.534 33.976C247.128 238.528 216 254.941 216 296v4c0 6.627 5.373 12 12 12h56c6.627 0 12-5.373 12-12v-1.333c0-28.462 83.186-29.647 83.186-106.667 0-58.002-60.165-102-116.531-102zM256 338c-25.365 0-46 20.635-46 46 0 25.364 20.635 46 46 46s46-20.636 46-46c0-25.365-20.635-46-46-46z">
+                            </path>
+                          </svg><!-- <i class="fa fa-question-circle"></i> Font Awesome fontawesome.com --></a>
+                        <div class="dropdown bootstrap-select d-block w-100 _traceOptions"><select
+                            class="selectpicker w-100 selectpicker_traceOptions mb-4 mt-2" data-size="7"
+                            data-live-search="true" id="select_trace_type" name="trace_type[]" required=""
+                            tabindex="-98">
+                            <option class="hiddenOption" value="" selected="">Choose...</option>
+                            <label="LAT">
+                              <option value="InceptionRes">InceptionRes</option>
+                              <option value="ResNet50">ResNet50</option>
+                              <option value="Unet">Unet</option>
+                          </select>
+                          <div class="invalid-feedback">Required!</div>
+                        </div>
+
+                      </div>
+
+
+
+                      <div class="col-lg-4 gender">
+                        <div class="form-group m-0">
+                          <label for="gender" class="mb-1">Patient sex</label>
+                          <div class="custom-control custom-radio gender_selection">
+                            <input id="female" name="gender" value="Female" type="radio"
+                              class="custom-control-input form-check-input" data-nice="Female" autocomplete="off"
+                              required="">
+                            <label class="custom-control-label" for="female">Female</label>
+                          </div>
+                          <div class="custom-control custom-radio gender_selection">
+                            <input id="male" name="gender" value="Male" type="radio"
+                              class="custom-control-input form-check-input" data-nice="Male" autocomplete="off"
+                              required="">
+                            <label class="custom-control-label" for="male">Male</label>
+                            <div class="invalid-feedback">Required!</div>
+                          </div>
+
+
+                        </div>
+                      </div>
+
+
+                    </div>
+
+
+                    <div class="col-lg-12">
+                      <div class="form-group ">
+                        <label for="comment" class="mb-2">Comments</label>
+
+                        <textarea name="comment[]" class="form-control" id="comment" rows="4"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer m-0 bg-transparent border-0">
+                    <div class="row">
+                      <div class="col-lg-12 my-1">
+                        <button class="btn w-100 send_to_tracking d-inline-block mt-3" id="btn_send_to_tracking">Send to
+                          tracing</button>
+
+                        <button class="btn btn-info" id="btn_update_record">Update</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class=" mx-auto">
+          <div class="row p-5 d-flex justify-content-center">
+            <div class="col-md-6 offset-xl-2 col-xl-4">
+              <div class="d-flex flex-column align-items-start pb-5">
+                <a href="/en" class="img-footer mb-3">
+                  <i class="fa-solid fa-tooth pe-2 footer-icon-tooth"></i>
+                  <h3 class="d-inline-block">Cepheo</h3>
+                </a>
+                <p>
+                  Cepheo is an online program for analyzing cephalometric X-Rays. Powered by advanced artificial
+                  intelligence it automatically performs landmark positioning. It is the program that saves time and
+                  ease the orthodontic treatment.
+                  <br><br>
+                  Follow us:
+                </p>
+                <div class="d-flex mt-3">
+                  <a href="https://www.facebook.com/cephio/" class="pe-2">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                  <a href="https://www.youtube.com/channel/UCS2JvhdL67fgfj6zcHG8biQ">
+                    <i class="fa-brands fa-youtube"></i>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-md-6 d-flex justify-content-start justify-content-md-center">
+              <div class="d-flex justify-content-center me-5">
+                <div>
+                  <h5 class="footer-col-header pb-4">Support</h5>
+                  <p><a href="/en/privacy/" class="footer-small-description support-link">Privacy Policy</a></p>
+                  <p><a href="/en/terms/" class="footer-small-description support-link">Terms &amp; conditions</a></p>
+                  <p id="changePreferences" class="footer-small-description support-link">Cookie preferences</p>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center ">
+                <div>
+                  <h5 class="footer-col-header pb-4">Contact</h5>
+                  <address class="footer-small-description" property="email">
+                    <a class="footer-small-description footer-mail"
+                      href="mailto:support@cepheo.com">support@cepheo.com</a>
+                  </address>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+    type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <script src="Js/index.js" type="module"></script>
+  <script src="Js/particles.min.js"></script>
+  <script src="Js/main.js"> </script>
+  <script src="Js/table.js"></script>
+</body>
+
+</html>

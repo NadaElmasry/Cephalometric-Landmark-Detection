@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&family=PT+Serif:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap & css file -->
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="Css/home.css">
+</head>
+
+<body>
+
+  <div class="navbar-box mb-1">
+    <div class="">
+      <div class="container-help-nav mx-auto">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+          <a class="navbar-brand" href="index.html">
+            <i class="fa-solid fa-tooth pe-2"></i>
+            <h3 class="d-inline-block mr-4 ml-2">Cepheo</h3>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="upload.html">Upload X-ray Image</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Repository.html">Repository</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Help.html">Help</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <ul class="navbar-nav d-flex me-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Login</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Sign Up</a>
+                </li>
+              </ul>
+            </form>
+          </div>
+      </div>
+      </nav>
+    </div>
+  </div>
+
+
+  <div class="row-elements">
+    <div class="container-help mx-auto mt-5 mb-0">
+      <div class="row axc-subnav align-items-center justify-content-md-between">
+        <div class="col-md-8 col-10">
+          <h3 class="m-0 Your-repository">How can we help?</h3>
+        </div>
+        <div class="col-auto d-none d-md-block">
+          <a class="btn send_to_tracking w-100  mb-md-0" href="upload.html">Start a new tracing</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="particles-js" class="d-flex mb-5 ">
+    <div class="position-absolute w-100">
+      <div class="container-help mx-auto w-100 mb-5">
+
+        <div class="row  mt-5">
+          <div class="col-lg-8">
+
+            <div class="card ">
+              <div class="card-body">
+                <div class="row ">
+                  <div class="col-lg-4 pr-md-3 d-flex justify-content-center center-cropped">
+                    <img src="Img/youtube.gif" alt="" class=" axc-radius tut-img-width">
+                  </div>
+                  <div class="col-lg-8 mt-4 mt-lg-0 d-flex align-items-center">
+                    <div>
+                      <h2 class="mb-0">Video tutorials</h2>
+                      <p class="mt-2">Learn everything from getting analysis done to manual editing results in our short
+                        instructional video. </p>
+                      <a class="btn axcbtn-md btn-axcblue send-mess-btn mt-4" href="https://youtu.be/C4l3qPer4XQ"
+                        target="_blank">Watch Now!</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="card mt-3 p-lg-3">
+              <div class="card-body ">
+                <h2 class="mb-0">Frequently asked questions</h2>
+                <p class="mt-1 mb-3">Browse through our explanations or download the <a target="_blank"
+                    class="font-weight-bold user-guide" href="/uploads/documents/Eng-WDC-UserGuide–webVersion.pdf">user
+                    guide</a> for detailed usage instructions.</p>
+                <div class="accordion" id="accordionHelp">
+                  <div class="card mb-2 bg-image-upload shadow-none">
+                    <div class="card-header" id="headingCollapseHelp0">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link collapsed btn-color" id="btn1" type="button" data-toggle="collapse"
+                          data-target="#collapseHelp0" aria-expanded="false" aria-controls="collapseHelp0">
+                          <i class="collapse-icon fa-solid fa-plus mr-2"></i> What is a token?
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseHelp0" class="collapse" aria-labelledby="headingCollapseHelp0"
+                      data-parent="#accordionHelp" style="">
+                      <div class="card-body bg-transparent">
+                        <p>One token means that one analysis can be done.</p>
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card mb-2 bg-image-upload shadow-none">
+                    <div class="card-header" id="headingCollapseHelp1">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link collapsed btn-color" id="btn2" type="button" data-toggle="collapse"
+                          data-target="#collapseHelp1" aria-expanded="false" aria-controls="collapseHelp1">
+                          <i class="collapse-icon fa-solid fa-plus mr-2"></i> What is an analysis type?
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseHelp1" class="collapse" aria-labelledby="headingCollapseHelp1"
+                      data-parent="#accordionHelp" style="">
+                      <div class="card-body bg-transparent">
+                        <p>Analysis type is a method of X-ray evaluation. It requires certain landmarks to be placed and
+                          measurements created and reports delivered.</p>
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card mb-2 bg-image-upload shadow-none">
+                    <div class="card-header" id="headingCollapseHelp2">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link collapsed btn-color" id="btn3" type="button" data-toggle="collapse"
+                          data-target="#collapseHelp2" aria-expanded="false" aria-controls="collapseHelp2">
+                          <i class="collapse-icon fa-solid fa-plus mr-2"></i> What is patient Identifier?
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseHelp2" class="collapse" aria-labelledby="headingCollapseHelp2"
+                      data-parent="#accordionHelp">
+                      <div class="card-body bg-transparent">
+                        <p>Patient identifier needs to be written before the image is sent to tracing. Most usualy this
+                          is going to be the patient name, family name, or registration number or other identifier in
+                          patient records.</p>
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card mb-2 bg-image-upload shadow-none">
+                    <div class="card-header" id="headingCollapseHelp3">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link collapsed btn-color" id="btn4" type="button" data-toggle="collapse"
+                          data-target="#collapseHelp3" aria-expanded="false" aria-controls="collapseHelp3">
+                          <i class="collapse-icon fa-solid fa-plus mr-2"></i> What happens when uploading image?
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseHelp3" class="collapse" aria-labelledby="headingCollapseHelp3"
+                      data-parent="#accordionHelp">
+                      <div class="card-body bg-transparent">
+                        <p> Cepheo will take the image and send the result of our analysis in the result page.</p>
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card mb-2 bg-image-upload shadow-none">
+                    <div class="card-header" id="headingCollapseHelp5">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link collapsed btn-color" id="btn5" type="button" data-toggle="collapse"
+                          data-target="#collapseHelp5" aria-expanded="false" aria-controls="collapseHelp5">
+                          <i class="collapse-icon fa-solid fa-plus mr-2"></i> Image type
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseHelp5" class="collapse" aria-labelledby="headingCollapseHelp5"
+                      data-parent="#accordionHelp">
+                      <div class="card-body bg-transparent">
+                        <p>Cepheo accepts different types of raster formats such as for example: jpg, png and also 2D
+                          Dicom format.</p>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-4 my-4 my-md-0">
+            <div class="card w-100 p-lg-3 p-2">
+              <div class="card-body ">
+                <h2 class="mb-3">Contact us</h2>
+                <form method="POST" action="" class="needs-validation2" novalidate="">
+                  <input type="hidden" name="submitted_helpSupport" value="1">
+
+
+                  <div class="form-group">
+                    <label for="exampleFormControlSelect1">Message subject</label>
+                    <select class="form-control my-2" id="exampleFormControlSelect1" name="subject_of_interest"
+                      required="">
+                      <option value="" selected="">Choose...</option>
+                      <option value="Payments and billing">Payments and billing</option>
+                      <option value="Help with using WeDoCeph.com">Help with using Cepheo.com</option>
+                      <option value="Requesting a new Analysis Type">Requesting a new Analysis Type</option>
+                      <option value="General question">General question</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Message subject required.
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="exampleFormControlTextarea1" class="my-2">Message</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="8" name="message"
+                      required=""></textarea>
+                    <div class="invalid-feedback">
+                      Message required.
+                    </div>
+                  </div>
+
+                  <input type="submit" class="btn axcbtn-lg btn-axcblue mt-4 w-100 send-mess-btn" value="Send Message">
+                </form>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+
+      <div class="footer">
+        <div class=" mx-auto">
+          <div class="row p-5 d-flex justify-content-center">
+            <div class="col-md-6 offset-xl-2 col-xl-4">
+              <div class="d-flex flex-column align-items-start pb-5">
+                <a href="/en" class="img-footer mb-3">
+                  <i class="fa-solid fa-tooth pe-2 footer-icon-tooth"></i>
+                  <h3 class="d-inline-block">Cepheo</h3>
+                </a>
+                <p>
+                  Cepheo is an online program for analyzing cephalometric X-Rays. Powered by advanced artificial
+                  intelligence it automatically performs landmark positioning. It is the program that saves time and
+                  ease the orthodontic treatment.
+                  <br><br>
+                  Follow us:
+                </p>
+                <div class="d-flex mt-3">
+                  <a href="https://www.facebook.com/profile.php?id=100089195230086" class="pe-2">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                  <a href="https://www.youtube.com/channel/UCS2JvhdL67fgfj6zcHG8biQ">
+                    <i class="fa-brands fa-youtube"></i>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+            <div class="col-md-6 d-flex justify-content-start justify-content-md-center">
+              <div class="d-flex justify-content-center me-5">
+                <div>
+                  <h5 class="footer-col-header pb-4">Support</h5>
+                  <p><a href="/en/privacy/" class="footer-small-description support-link">Privacy Policy</a></p>
+                  <p><a href="/en/terms/" class="footer-small-description support-link">Terms &amp; conditions</a></p>
+                  <p id="changePreferences" class="footer-small-description support-link">Cookie preferences</p>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center ">
+                <div>
+                  <h5 class="footer-col-header pb-4">Contact</h5>
+                  <address class="footer-small-description" property="email">
+                    <a class="footer-small-description footer-mail"
+                      href="mailto:support@cepheo.com">support@cepheo.com</a>
+                  </address>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="js/index.js" type="module"></script>
+  <script src="Js/particles.min.js"></script>
+  <script src="Js/main.js"> </script>
+  <script src="Js/help.js"> </script>
+</body>
+
+</html>
