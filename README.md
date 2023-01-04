@@ -43,6 +43,17 @@ Detection of cephalometric landmarks with Deep learning models. Dataset:
 ![Landmark detection](https://i.imgur.com/zxl6jGj.jpg)
 
 
+## Models Notebook
+
+- `Binary Mask Trial Unet.ipynb` The mask used for segmentation is a binary 1 channel array, where 1's represent landmarks location and 0's represent the background.
+
+- `Unet_and_get_ROIs_for_Stage2.ipynb` The mask used for segmentation is a 20 channels mask, where each channel represent a landmark and the last channel represent the background. Each channel was filled using the following equation.
+
+![Home Page Section](https://i.imgur.com/IpeNZp6.jpeg)
+
+- `resnet_inception_final.ipynb`
+
+- `resnet_rois.ipynb`
 ## Installation
 
 Install node.js  👉 [Download](https://nodejs.org/en/download/)
@@ -94,9 +105,8 @@ HTML, CSS, Javascript, Node, Flask, MongoDB and deep learning
 ### Cepheo - Result Section
 ![Result Page Section](https://i.imgur.com/ZE6oFXy.png)
 
- 
  - Sample of saved analyzed image
- 
+
 ![analyzed image](https://i.imgur.com/NWyHYfs.png)
 
 - Sample of our patient medical record
@@ -136,7 +146,7 @@ If you have any feedback, please reach out to us at cepheo00@gmail.com
 - [@tasneemkhaled](https://github.com/Tasneem-Elamary)
 - [@maryammahmoud](https://github.com/Mariam924)
 - [@hadeerkhaled](https://github.com/hadeer-khaled)
-- [@nouranMuhammed](https://github.com/Nouran-Muhammad)
+- [@nouranMuhammed](https://github.com/hadeer-khaled)
 - [@Lailahamdy](https://github.com/lailahamdy)
 - [@nadaAhmed](https://github.com/NadaElmasry)
 - [@marwahelmy](https://github.com/MarwaHelmy999)
