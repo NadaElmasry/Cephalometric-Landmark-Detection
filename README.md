@@ -110,7 +110,6 @@ HTML, CSS, Javascript, Node, Flask, MongoDB and deep learning
 ![analyzed image](https://i.imgur.com/NWyHYfs.png)
 
 - Sample of our patient medical record
-
 ![Patient Record](https://i.imgur.com/V9IbkcU.jpeg)
 
 ### Cepheo - Help Page
